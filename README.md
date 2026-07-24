@@ -117,16 +117,20 @@ operator before launch:
 3. Whether official-site rates undercut OTA rates (affects whether the site
    may claim "book direct and save").
 4. Original photo files for all three properties (not Airbnb-sourced).
-5. Confirmed max guest count per property.
-6. Google Maps URL for 民宿HIDAMARI.
-7. Inquiry channels beyond email (LINE, Instagram, etc.)?
-8. Domain name.
-9. Whether the "6+ adults" futon threshold at SHIRAKABE includes 6 itself.
-10. Bathroom/shower/toilet counts, dryer count, and cookware list for HIDAMARI.
-11. Early-arrival luggage storage policy (varies / unclear per property).
-12. Business address, phone, representative name, payment methods, and
-    cancellation terms for the Tokutei Shotorihiki Ho notice (`data/legal.ts`).
-13. Sightseeing spot hours, fees, and a Google Maps list from the operator.
+5. Google Maps URL for 民宿HIDAMARI.
+6. Inquiry channels beyond email (LINE, Instagram, etc.)?
+7. Domain name.
+8. Dryer count and cookware list for 民宿HIDAMARI (bathroom/toilet counts and
+   max guests are now confirmed — see `data/stays.ts`).
+9. Business address, phone, representative name, payment methods, and
+   cancellation terms for the Tokutei Shotorihiki Ho notice (`data/legal.ts`).
+10. Sightseeing spot hours, fees, and a Google Maps list from the operator.
+
+Resolved so far (2026-07-24): max guest counts for all three properties,
+倉敷NAGAYA's bathroom/toilet count, SHIRAKABEの宿's max guests and futon
+threshold (8+ adults), 民宿HIDAMARI's bathroom/toilet count and sofa-bed
+threshold (4+ adults, queen size, 1st floor), and the early-arrival luggage
+policy (entrance drop-off before 16:00, common to all three properties).
 
 ## Pre-launch checklist
 

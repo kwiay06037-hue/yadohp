@@ -99,7 +99,7 @@ export function ComparisonTable({
             label={messages.stays.bathrooms}
             cells={stays.map((s) =>
               s.bathrooms !== null || s.showers !== null
-                ? `${s.bathrooms ?? 0} / ${s.showers ?? 0}`
+                ? `${s.bathrooms ?? dash} / ${s.showers ?? dash}`
                 : dash
             )}
           />

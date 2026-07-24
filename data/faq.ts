@@ -33,9 +33,9 @@ export const commonFaq: FaqItem[] = [
       zhTW: "提早抵達時可以寄放行李嗎？",
     },
     answer: {
-      ja: "施設により運用が異なります。運用が確定していない施設については、確定次第ご案内します。",
-      en: "This varies by property. For properties where the process is not yet finalized, we will update this once confirmed.",
-      zhTW: "依各設施而有所不同，流程尚未確定的設施，將於確定後另行公告。",
+      ja: "はい。チェックイン時刻（16:00）より前にご到着の場合も、玄関でお荷物をお預かりできます。",
+      en: "Yes. If you arrive before check-in time (4:00 PM), we can hold your luggage at the entrance.",
+      zhTW: "可以。若於入住時間（16:00）前抵達，也能於玄關寄放行李。",
     },
   },
   {
