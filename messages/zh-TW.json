@@ -22,6 +22,7 @@
     "contactThisStayInquiry": "聯絡我們",
     "bookingComingSoon": "預約頁面準備中",
     "viewOnMap": "在地圖上查看",
+    "noMapListing": "尚未登錄於 Google 地圖。",
     "readMore": "查看詳情",
     "backToStays": "返回住宿列表",
     "beforeBookingNotice": "預約前，請確認人數上限、寢具、樓梯、安靜時段與停車場等重要事項。",
@@ -167,7 +168,8 @@
     "successBody": "此為示範表單，實際送出處理仍待實作（TODO）。",
     "errorRequired": "此欄位為必填。",
     "errorEmail": "電子郵件格式不正確。",
-    "directEmailNote": "若無法使用表單，也可直接寫信至"
+    "directEmailNote": "若無法使用表單，也可直接寫信至",
+    "instagramNote": "也可透過 Instagram 與我們聯繫："
   },
   "terms": {
     "pageTitle": "使用條款"

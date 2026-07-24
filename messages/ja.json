@@ -22,6 +22,7 @@
     "contactThisStayInquiry": "お問い合わせ",
     "bookingComingSoon": "予約ページ準備中",
     "viewOnMap": "地図で見る",
+    "noMapListing": "Googleマップには登録されていません。",
     "readMore": "詳しく見る",
     "backToStays": "宿一覧に戻る",
     "beforeBookingNotice": "ご予約前に、定員、寝具、階段、静粛時間、駐車場などの重要事項をご確認ください。",
@@ -167,7 +168,8 @@
     "successBody": "この画面はデモ用フォームです。送信処理は実装のTODOとして残されています。",
     "errorRequired": "この項目は必須です。",
     "errorEmail": "メールアドレスの形式が正しくありません。",
-    "directEmailNote": "フォームをご利用いただけない場合は"
+    "directEmailNote": "フォームをご利用いただけない場合は",
+    "instagramNote": "Instagramからのお問い合わせも受け付けています："
   },
   "terms": {
     "pageTitle": "利用規約"

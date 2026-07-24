@@ -117,20 +117,27 @@ operator before launch:
 3. Whether official-site rates undercut OTA rates (affects whether the site
    may claim "book direct and save").
 4. Original photo files for all three properties (not Airbnb-sourced).
-5. Google Maps URL for 民宿HIDAMARI.
-6. Inquiry channels beyond email (LINE, Instagram, etc.)?
-7. Domain name.
-8. Dryer count and cookware list for 民宿HIDAMARI (bathroom/toilet counts and
-   max guests are now confirmed — see `data/stays.ts`).
-9. Business address, phone, representative name, payment methods, and
-   cancellation terms for the Tokutei Shotorihiki Ho notice (`data/legal.ts`).
-10. Sightseeing spot hours, fees, and a Google Maps list from the operator.
+5. The operator's Instagram URL/handle (confirmed as an accepted inquiry
+   channel — set `NEXT_PUBLIC_INSTAGRAM_URL` once known; see `.env.example`).
+6. Domain name.
+7. Full cookware/utensil list for 民宿HIDAMARI (dryer count and an IH cooktop
+   are now confirmed — see `data/stays.ts`).
+8. Phone number, representative name, and payment methods for the Tokutei
+   Shotorihiki Ho notice (`data/legal.ts`) — address and cancellation terms
+   are now confirmed there, but a professional should verify that
+   withholding the public address satisfies the Act's prompt-disclosure
+   requirement (see the note already added in `data/legal.ts`).
+9. Sightseeing spot hours, fees, and a Google Maps list from the operator.
 
-Resolved so far (2026-07-24): max guest counts for all three properties,
-倉敷NAGAYA's bathroom/toilet count, SHIRAKABEの宿's max guests and futon
-threshold (8+ adults), 民宿HIDAMARI's bathroom/toilet count and sofa-bed
-threshold (4+ adults, queen size, 1st floor), and the early-arrival luggage
-policy (entrance drop-off before 16:00, common to all three properties).
+Resolved so far (2026-07-24): max guest counts for all three properties;
+倉敷NAGAYA's bathroom/toilet count and futon threshold (6+ adults);
+SHIRAKABEの宿's max guests and futon threshold (8+ adults); 民宿HIDAMARI's
+bathroom/toilet count, sofa-bed threshold (4+ adults, queen size, 1st
+floor), dryer count, and IH cooktop; confirmation that 民宿HIDAMARI has no
+Google Maps listing (the UI now says so instead of "to be confirmed"); the
+early-arrival luggage policy (entrance drop-off before 16:00, common to all
+three properties); Instagram accepted as an inquiry channel; and the
+cancellation policy (free up to 7 days before check-in, 100% after).
 
 ## Pre-launch checklist
 

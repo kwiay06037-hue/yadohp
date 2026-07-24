@@ -9,6 +9,10 @@ export const site = {
   brandNameStatus: "provisional" as const,
   operatorName: "YUICHIRO KIKKAWA",
   contactEmail: "kwiay06037@gmail.com",
+  // Confirmed: Instagram is an accepted inquiry channel alongside email.
+  // TODO: the operator's Instagram handle/URL hasn't been supplied yet —
+  // set NEXT_PUBLIC_INSTAGRAM_URL once known to surface the link on-site.
+  instagramUrl: process.env.NEXT_PUBLIC_INSTAGRAM_URL || null,
   // TODO: confirm domain before launch.
   domain: process.env.NEXT_PUBLIC_SITE_DOMAIN ?? "https://example.com",
   defaultBookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL ?? "",

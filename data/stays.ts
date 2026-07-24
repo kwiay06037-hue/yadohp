@@ -407,7 +407,7 @@ export const stays: Stay[] = [
       zhTW: "與家人或重要的人，以自己步調度過時光的溫馨住宿空間。",
     },
     address: "岡山県倉敷市稲荷町7-30",
-    // TODO: Google Maps URL for HIDAMARI not yet supplied — confirm before launch.
+    // Confirmed by the operator: this property has no Google Maps listing.
     mapUrl: null,
     airbnbReferenceUrl: "https://www.airbnb.jp/rooms/1364452941170748365",
     bookingUrlEnvVar: "NEXT_PUBLIC_HIDAMARI_BOOKING_URL",
@@ -457,7 +457,8 @@ export const stays: Stay[] = [
       { category: "device", label: { ja: "2階プロジェクター", en: "Projector (2nd floor)", zhTW: "2 樓投影機" } },
       { category: "device", label: { ja: "1階テレビ", en: "TV (1st floor)", zhTW: "1 樓電視" } },
       { category: "kitchen", label: { ja: "冷蔵冷凍庫", en: "Refrigerator/freezer", zhTW: "冰箱冷凍庫" } },
-      { category: "other", label: { ja: "ドライヤー", en: "Hair dryer", zhTW: "吹風機" } },
+      { category: "kitchen", label: { ja: "IHクッキングヒーター（1台）", en: "IH cooktop (1)", zhTW: "IH 電磁爐（1台）" } },
+      { category: "other", label: { ja: "ドライヤー（1台）", en: "Hair dryer (1)", zhTW: "吹風機（1台）" } },
       { category: "other", label: { ja: "ドラム式洗濯機（洗剤・柔軟剤は無添加さらさ）", en: "Drum-type washer (additive-free detergent provided)", zhTW: "滾筒式洗衣機（提供無添加洗劑）" } },
       { category: "bath", label: { ja: "無印良品アメニティ", en: "MUJI amenities", zhTW: "無印良品備品" } },
     ],

@@ -50,7 +50,7 @@ export default async function AccessPage({
                   {messages.cta.viewOnMap}
                 </a>
               ) : (
-                <span className="text-sm text-ink-soft">{messages.stays.unconfirmed}</span>
+                <span className="text-sm text-ink-soft">{messages.cta.noMapListing}</span>
               )}
               <Button
                 href={localizedPath(locale, `/stays/${stay.slug}`)}

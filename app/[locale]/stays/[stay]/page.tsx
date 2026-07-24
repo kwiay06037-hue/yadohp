@@ -163,7 +163,7 @@ export default async function StayDetailPage({
             {messages.cta.viewOnMap}
           </a>
         ) : (
-          <p className="mt-2 text-sm text-ink-soft">{messages.stays.unconfirmed}</p>
+          <p className="mt-2 text-sm text-ink-soft">{messages.cta.noMapListing}</p>
         )}
       </Section>
 
@@ -274,7 +274,9 @@ export default async function StayDetailPage({
           >
             {messages.cta.viewOnMap}
           </a>
-        ) : null}
+        ) : (
+          <p className="mt-2 text-sm text-ink-soft">{messages.cta.noMapListing}</p>
+        )}
         <div className="mt-4">
           <Link
             href={localizedPath(locale, "/access")}

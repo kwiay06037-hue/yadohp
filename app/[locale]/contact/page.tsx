@@ -36,6 +36,19 @@ export default async function ContactPage({
         <p className="mt-6 text-xs text-ink-soft">
           {messages.contact.directEmailNote} {site.contactEmail}
         </p>
+        {site.instagramUrl ? (
+          <p className="mt-1 text-xs text-ink-soft">
+            {messages.contact.instagramNote}{" "}
+            <a
+              href={site.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-accent underline underline-offset-2"
+            >
+              Instagram
+            </a>
+          </p>
+        ) : null}
       </div>
     </Section>
   );

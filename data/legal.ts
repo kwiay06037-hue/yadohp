@@ -67,7 +67,18 @@ export const termsSections: LegalSection[] = [
       en: "Article 5 (Cancellation policy)",
       zhTW: "第五條（取消政策）",
     },
-    body: [TODO_NOTE],
+    body: [
+      {
+        ja: "チェックイン日の7日前まではキャンセル料はかかりません。チェックイン7日前を過ぎてのキャンセルは、宿泊料金の100%（全額）を頂戴します。",
+        en: "Cancellations are free of charge up to 7 days before check-in. Cancellations made after that point are charged 100% (the full amount) of the stay's rate.",
+        zhTW: "入住日 7 天前皆可免費取消，恕不收取取消費用。超過此期限取消者，將收取住宿費用全額（100%）之取消費用。",
+      },
+      {
+        ja: "予約プラットフォーム経由でのご予約は、そのプラットフォームのキャンセルポリシーが適用される場合があります。予約時にあわせてご確認ください。",
+        en: "Reservations made through a booking platform may instead be governed by that platform's cancellation policy. Please check this at the time of booking.",
+        zhTW: "透過訂房平台預約時，該平台之取消政策可能優先適用，請於預約時一併確認。",
+      },
+    ],
   },
   {
     heading: {
@@ -119,7 +130,21 @@ export const tokushohoSections: LegalSection[] = [
     heading: { ja: "販売事業者", en: "Business operator", zhTW: "營業者" },
     body: [{ ja: "YUICHIRO KIKKAWA（詳細情報は準備中）", en: "YUICHIRO KIKKAWA (details pending)", zhTW: "YUICHIRO KIKKAWA（詳細資訊準備中）" }],
   },
-  { heading: { ja: "所在地", en: "Address", zhTW: "地址" }, body: [TODO_NOTE] },
+  {
+    heading: { ja: "所在地", en: "Address", zhTW: "地址" },
+    body: [
+      {
+        ja: "個人で運営しているため、所在地は本ページでは公開しておりません。ご予約が確定されたお客様には、チェックイン前のご案内にて別途お知らせします。",
+        en: "As this is operated as an individual business, the address is not published on this page. Guests with a confirmed reservation will receive it separately in pre-check-in guidance.",
+        zhTW: "由於本業務為個人經營，本頁面不公開所在地地址。已完成預約之房客，將於入住前的說明中另行告知。",
+      },
+      {
+        ja: "特定商取引法上、所在地を非公開とする場合は、請求があった際に遅滞なく開示できる体制が必要です。本方針がこの要件を満たしているか、公開前に専門家にご確認ください。",
+        en: "Under the Specified Commercial Transactions Act, withholding the address from public view requires being able to disclose it promptly upon request. Please confirm with a qualified professional before launch that this policy satisfies that requirement.",
+        zhTW: "依《特定商業交易法》規定，若選擇不公開所在地，須具備於消費者請求時能迅速提供之機制。請於上線前洽詢專業人士，確認此做法是否符合相關規定。",
+      },
+    ],
+  },
   { heading: { ja: "電話番号", en: "Phone number", zhTW: "電話號碼" }, body: [TODO_NOTE] },
   { heading: { ja: "運営責任者", en: "Representative", zhTW: "負責人" }, body: [TODO_NOTE] },
   {
@@ -135,7 +160,13 @@ export const tokushohoSections: LegalSection[] = [
   { heading: { ja: "お支払い方法", en: "Payment methods", zhTW: "付款方式" }, body: [TODO_NOTE] },
   {
     heading: { ja: "キャンセル規定", en: "Cancellation terms", zhTW: "取消規定" },
-    body: [TODO_NOTE],
+    body: [
+      {
+        ja: "チェックイン日の7日前まではキャンセル料はかかりません。チェックイン7日前を過ぎてのキャンセルは、宿泊料金の100%（全額）を頂戴します。",
+        en: "Cancellations are free of charge up to 7 days before check-in. Cancellations made after that point are charged 100% (the full amount) of the stay's rate.",
+        zhTW: "入住日 7 天前皆可免費取消，恕不收取取消費用。超過此期限取消者，將收取住宿費用全額（100%）之取消費用。",
+      },
+    ],
   },
 ];
 

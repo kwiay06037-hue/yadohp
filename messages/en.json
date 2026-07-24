@@ -22,6 +22,7 @@
     "contactThisStayInquiry": "Contact us",
     "bookingComingSoon": "Booking page coming soon",
     "viewOnMap": "View on map",
+    "noMapListing": "Not listed on Google Maps.",
     "readMore": "Read more",
     "backToStays": "Back to all stays",
     "beforeBookingNotice": "Before booking, please review capacity, bedding, stairs, quiet hours, and parking details.",
@@ -167,7 +168,8 @@
     "successBody": "This is a demo form — the actual submission handler is left as a TODO for implementation.",
     "errorRequired": "This field is required.",
     "errorEmail": "Please enter a valid email address.",
-    "directEmailNote": "If you're unable to use this form, you can reach us at"
+    "directEmailNote": "If you're unable to use this form, you can reach us at",
+    "instagramNote": "We also accept inquiries via Instagram:"
   },
   "terms": {
     "pageTitle": "Terms of Use"
