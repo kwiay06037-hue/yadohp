@@ -73,9 +73,15 @@ broken image or a generic gray box. To add real photos:
 
 1. Drop files under `public/images/<stay-slug>/...`.
 2. Set `src` to that path (e.g. `/images/kurashiki-nagaya/exterior-01.jpg`).
-3. Only use photos the operator has supplied directly — do not download or
-   re-host photos from the Airbnb listings referenced in `data/stays.ts`
-   (`airbnbReferenceUrl` is for cross-checking facts only).
+3. Only use photos the operator owns the rights to. In practice: photos the
+   operator personally took/uploaded to their own Airbnb, Booking.com, or
+   Google Business Profile listing are fine to reuse (uploading to those
+   platforms doesn't sign away the copyright — the host keeps it, and only
+   grants that platform a display license). Prefer the operator's original
+   source files over images re-downloaded from those listing pages (better
+   quality, and avoids any ambiguity about provenance). Do NOT use photos
+   uploaded by other users — guests, reviewers, Street View, etc. — since
+   those belong to whoever took them, not the operator.
 
 ### Booking URLs
 
@@ -116,7 +122,9 @@ operator before launch:
 2. Booking platform / URLs for each property (Beds24 or otherwise).
 3. Whether official-site rates undercut OTA rates (affects whether the site
    may claim "book direct and save").
-4. Original photo files for all three properties (not Airbnb-sourced).
+4. Photo files for all three properties (the operator's own, ideally
+   original-quality files rather than re-downloaded listing-page images —
+   see "Photos" above).
 5. The operator's Instagram URL/handle (confirmed as an accepted inquiry
    channel — set `NEXT_PUBLIC_INSTAGRAM_URL` once known; see `.env.example`).
 6. Domain name.
