@@ -407,8 +407,12 @@ export const stays: Stay[] = [
       zhTW: "與家人或重要的人，以自己步調度過時光的溫馨住宿空間。",
     },
     address: "岡山県倉敷市稲荷町7-30",
-    // Confirmed by the operator: this property has no Google Maps listing.
-    mapUrl: null,
+    // The operator could not register a Google Business Profile for this
+    // property — the address's land parcel overlaps with a neighboring
+    // facility ("エバホール") and Google doesn't recognize it as a distinct
+    // location. There is no dedicated map pin, so this links to a Google
+    // Maps address search instead (the operator-confirmed workaround).
+    mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("岡山県倉敷市稲荷町7-30")}`,
     airbnbReferenceUrl: "https://www.airbnb.jp/rooms/1364452941170748365",
     bookingUrlEnvVar: "NEXT_PUBLIC_HIDAMARI_BOOKING_URL",
     maxGuests: 5,

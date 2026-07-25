@@ -141,8 +141,11 @@ Resolved so far (2026-07-24): max guest counts for all three properties;
 倉敷NAGAYA's bathroom/toilet count and futon threshold (6+ adults);
 SHIRAKABEの宿's max guests and futon threshold (8+ adults); 民宿HIDAMARI's
 bathroom/toilet count, sofa-bed threshold (4+ adults, queen size, 1st
-floor), dryer count, and IH cooktop; confirmation that 民宿HIDAMARI has no
-Google Maps listing (the UI now says so instead of "to be confirmed"); the
+floor), dryer count, and IH cooktop; why 民宿HIDAMARI has no Google Business
+Profile (its parcel overlaps a neighboring facility, "エバホール", so Google
+won't register it as a distinct location) — its "View on map" link now
+points to a Google Maps address search for 岡山県倉敷市稲荷町7-30 instead of a
+dedicated pin, which is the operator-confirmed workaround; the
 early-arrival luggage policy (entrance drop-off before 16:00, common to all
 three properties); Instagram accepted as an inquiry channel; and the
 cancellation policy (free up to 7 days before check-in, 100% after).
