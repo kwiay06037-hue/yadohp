@@ -113,9 +113,10 @@ Beds24 API V2 auth is a three-step token chain:
    refresh token does not expire as long as it's used at least once every 30
    days. Treat it like a password — never commit it, log it, paste it into
    chat/tickets, or reference it from client-side code.
-3. **Access token** — short-lived, fetched from the refresh token by
-   application code on each API call. Not implemented yet; that's the next
-   step.
+3. **Access token** — short-lived (Beds24-documented default: 24h), fetched
+   from the refresh token by `lib/beds24-client.ts` and cached in memory
+   (with an early-refresh safety margin) so it's not re-requested on every
+   call.
 
 Config is read via `lib/beds24-config.ts` (`getBeds24Config()`), which
 throws a descriptive error (pointing back to this section) if
@@ -126,6 +127,19 @@ Related env vars (see `.env.example`):
 - `BEDS24_REFRESH_TOKEN` — from step 2 above. Required, no default.
 - `BEDS24_API_BASE_URL` — defaults to `https://api.beds24.com/v2`; only
   override if Beds24 documents a different base URL for your account.
+
+`lib/beds24-client.ts` exports `getBookings(query?)`, which calls
+`GET /bookings`, retries once on a 401 (forcing a fresh access token), and
+throws `Beds24ApiError` (with `status` and the parsed response `body`) on
+failure. Both the token endpoint and the bookings endpoint are called with
+`cache: "no-store"` since booking data changes constantly and must never be
+served stale by Next.js's fetch cache. `Beds24Booking`'s field list covers
+the commonly used fields (id, propertyId, arrival/departure, guest name,
+status, etc.) but isn't an exhaustive schema — unlisted fields still come
+through via its index signature.
+
+This client isn't wired into any page or API route yet — that's the next
+step (deciding where/how the site should display or use booking data).
 
 ### Translations
 
