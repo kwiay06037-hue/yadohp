@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/beds24/sync",
+      "schedule": "0 3 * * *"
+    }
+  ]
+}

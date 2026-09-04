@@ -138,8 +138,46 @@ the commonly used fields (id, propertyId, arrival/departure, guest name,
 status, etc.) but isn't an exhaustive schema — unlisted fields still come
 through via its index signature.
 
-This client isn't wired into any page or API route yet — that's the next
-step (deciding where/how the site should display or use booking data).
+### Beds24 booking sync
+
+`app/api/beds24/sync/route.ts` (`GET /api/beds24/sync`) periodically pulls
+bookings from Beds24 via `getBookings()`. Current scope, deliberately kept
+small:
+
+- **Trigger**: Vercel Cron Jobs, configured in `vercel.json` (daily, 03:00
+  UTC by default — edit the `schedule` there to change it). Vercel's Hobby
+  plan only allows daily cron schedules; more frequent schedules (hourly,
+  every N minutes) require a Pro plan.
+- **Auth**: the route requires `Authorization: Bearer <CRON_SECRET>` (401
+  otherwise). Set `CRON_SECRET` in Vercel's project environment variables
+  and Vercel sends that header automatically on every cron invocation — no
+  extra wiring needed. Without `CRON_SECRET` set, the route always rejects
+  (fails closed, not open).
+- **No persistence yet** — the route fetches bookings and logs the count
+  (visible in Vercel's function logs / `vercel logs`); it doesn't write
+  anywhere yet. This was a deliberate choice to first confirm the
+  cron → auth → Beds24 fetch path end-to-end before adding storage
+  infrastructure.
+- **No incremental filtering yet** — it fetches Beds24's default result set
+  every run rather than "bookings changed since last sync". Beds24 V2 does
+  support filtering (e.g. `modifiedFrom`/`modifiedTo` on `getBookings()`'s
+  query param), but the exact accepted date/time format hasn't been
+  confirmed against this account's own API docs, and guessing wrong could
+  silently drop bookings from a sync — not something to get wrong quietly.
+
+Test locally:
+```bash
+curl -i http://localhost:3000/api/beds24/sync \
+  -H "Authorization: Bearer $CRON_SECRET"
+```
+
+Next steps (not yet decided): where to persist synced bookings (a
+database/KV store), and — once that exists — switching to an incremental
+sync using a stored "last successful sync" cursor instead of a fixed lookback
+or full refetch.
+
+This client isn't wired into any page yet — that's a separate step from
+syncing (deciding where/how the site should *display* booking data).
 
 ### Translations
 
