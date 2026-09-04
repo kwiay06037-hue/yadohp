@@ -90,6 +90,43 @@ Each property resolves its "check availability" button from an env var
 shows "booking page coming soon" and links to `/contact` instead of a dead
 link.
 
+### Beds24 API V2 setup
+
+This project is being wired up to fetch live booking data from Beds24 API V2.
+Credentials are never hardcoded — they live only in environment variables
+(`.env.local`, or your hosting provider's env var settings), and only the
+server ever sees them (no `NEXT_PUBLIC_` prefix, so Next.js never bundles
+them into client-side JS).
+
+Beds24 API V2 auth is a three-step token chain:
+
+1. **Invite code** — a single-use, short-lived code you generate yourself in
+   the Beds24 control panel (Settings > Account > Access, or Settings >
+   Marketplace > API, depending on your account). It is never stored in this
+   project; it only exists long enough to run step 2.
+2. **Refresh token** — exchange the invite code once for a long-life refresh
+   token by running:
+   ```bash
+   npm run beds24:setup -- <inviteCode>
+   ```
+   Copy the printed `BEDS24_REFRESH_TOKEN=...` line into `.env.local`. The
+   refresh token does not expire as long as it's used at least once every 30
+   days. Treat it like a password — never commit it, log it, paste it into
+   chat/tickets, or reference it from client-side code.
+3. **Access token** — short-lived, fetched from the refresh token by
+   application code on each API call. Not implemented yet; that's the next
+   step.
+
+Config is read via `lib/beds24-config.ts` (`getBeds24Config()`), which
+throws a descriptive error (pointing back to this section) if
+`BEDS24_REFRESH_TOKEN` is missing, rather than silently continuing with
+partial credentials.
+
+Related env vars (see `.env.example`):
+- `BEDS24_REFRESH_TOKEN` — from step 2 above. Required, no default.
+- `BEDS24_API_BASE_URL` — defaults to `https://api.beds24.com/v2`; only
+  override if Beds24 documents a different base URL for your account.
+
 ### Translations
 
 Edit the matching key in all three `messages/*.json` files together. Do not
